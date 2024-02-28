@@ -1,9 +1,6 @@
 use std::io;
 use std::io::Write;
 
-// read_integer y read_double leen valores introducidos por el usuario.
-// También permiten mostrarle un mensaje personalizado.
-
 pub fn read_integer(message: &str) -> i16 {
     let mut number = String::new();
 
