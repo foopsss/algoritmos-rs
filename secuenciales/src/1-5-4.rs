@@ -8,8 +8,8 @@ fn main() {
     let superficie: f64 = ( (b_mayor + b_menor) * altura ) / 2.0;
 
     println!("");
-    println!("Superficie del trapecio: {superficie} metros cuadrados.");
-    println!("Longitud de la base mayor: {b_mayor} metros.");
-    println!("Longitud de la base menor: {b_menor} metros.");
-    println!("Altura: {altura} metros.");
+    println!("La superficie del trapecio es de {superficie} metros cuadrados.");
+    println!("La longitud de la base mayor es de {b_mayor} metros.");
+    println!("La longitud de la base menor es {b_menor} metros.");
+    println!("La altura es de {altura} metros.");
 }

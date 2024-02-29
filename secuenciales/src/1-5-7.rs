@@ -1,0 +1,15 @@
+use functions::read_integer;
+
+fn main() {
+    let x: i16 = read_integer("Introduzca un valor para X");
+    let y: i16 = read_integer("Introduzca un valor para Y");
+    let z: i16 = read_integer("Introduzca un valor para Z");
+
+    let med_geo: i16 = (x * y * z) / 3;
+
+    println!("");
+    println!("Valor de X: {x}");
+    println!("Valor de Y: {y}");
+    println!("Valor de Z: {z}");
+    println!("Valor de la media geométrica: {med_geo}");
+}

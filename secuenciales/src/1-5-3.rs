@@ -11,5 +11,6 @@ fn main() {
     let iva: f64 = sumatoria * 0.21;
     let total: f64 = sumatoria + iva;
 
+    println!("");
     println!("El precio total de las ventas es de {total} pesos.");
 }
