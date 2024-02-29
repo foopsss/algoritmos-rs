@@ -13,6 +13,6 @@ Los nombres de los proyectos de Cargo dan a entender el tema al que corresponden
 ## Compilación
 Para compilar los ejercicios hay que clonar el repositorio, situarse en el directorio/proyecto de Cargo correspondiente a un tema específico y utilizar el comando `cargo run --bin <número de ejercicio>`. Esto se va a encargar de compilar y ejecutar automáticamente el programa.
 
-* Por ejemplo, si quisiera compilar y ejecutar el ejercicio 1.5.1 del Trabajo Práctico N.º 1 sobre Estructuras Secuenciales, me situaría en el proyecto de Cargo «secuenciales» y luego utilizaría el comando `cargo run --bin <1-5-1>`.
+* Por ejemplo, si quisiera compilar y ejecutar el ejercicio 1.5.1 del Trabajo Práctico N.º 1 sobre Estructuras Secuenciales, me situaría en el proyecto de Cargo «secuenciales» y luego utilizaría el comando `cargo run --bin 1-5-1`.
 
 Si únicamente se busca compilar uno de los ejercicios, se puede utilizar el comando `cargo build --bin <número de ejercicio>`.
