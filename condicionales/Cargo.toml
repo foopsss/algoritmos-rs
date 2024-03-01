@@ -1,0 +1,39 @@
+[package]
+name = "condicionales"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+functions = {path = "../functions"}
+
+[[bin]]
+name = "1-6"
+path = "src/1-6.rs"
+
+[[bin]]
+name = "1-7"
+path = "src/1-7.rs"
+
+[[bin]]
+name = "1-8"
+path = "src/1-8.rs"
+
+[[bin]]
+name = "1-9"
+path = "src/1-9.rs"
+
+[[bin]]
+name = "1-10"
+path = "src/1-10.rs"
+
+[[bin]]
+name = "1-11"
+path = "src/1-11.rs"
+
+[[bin]]
+name = "1-12"
+path = "src/1-12.rs"
+
+[[bin]]
+name = "1-13"
+path = "src/1-13.rs"
