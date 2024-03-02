@@ -1,11 +1,11 @@
 use functions::read_integer;
 
 fn main() {
-    let x: i16 = read_integer("Introduzca un valor para X");
-    let y: i16 = read_integer("Introduzca un valor para Y");
-    let z: i16 = read_integer("Introduzca un valor para Z");
+    let x = read_integer("Introduzca un valor para X");
+    let y = read_integer("Introduzca un valor para Y");
+    let z = read_integer("Introduzca un valor para Z");
 
-    let med_geo: i16 = (x * y * z) / 3;
+    let med_geo = (x * y * z) / 3;
 
     println!("");
     println!("Valor de X: {x}");

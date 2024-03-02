@@ -1,13 +1,13 @@
 use functions::read_integer;
 
 fn main() {
-    let a: i16 = read_integer("Ingrese un valor para el número a");
-    let b: i16 = read_integer("Ingrese un valor para el número b");
-    let c: i16 = read_integer("Ingrese un valor para el número c");
+    let a = read_integer("Ingrese un valor para el número a");
+    let b = read_integer("Ingrese un valor para el número b");
+    let c = read_integer("Ingrese un valor para el número c");
 
-    let mut mayor: i16 = a;
-    let mut menor: i16 = 0;
-    let mut intermedio: i16 = 0;
+    let mut mayor = a;
+    let mut menor = 0;
+    let mut intermedio = 0;
 
     if b > mayor && c > mayor {
         menor = mayor;
