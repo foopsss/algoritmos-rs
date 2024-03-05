@@ -13,7 +13,9 @@ fn main() {
     if viaje_euros > ahorros_euros {
         diferencia_pesos = (viaje_euros - ahorros_euros) * euro_a_peso;
         println!("Para poder cubrir los costos del viaje se requieren de otros {diferencia_pesos} pesos.");
-    } else if viaje_euros < ahorros_euros {
+    } else if viaje_euros == ahorros_euros {
+        println!("Felicidades, posee la cantidad justa para realizar el viaje.");
+    } else {
         diferencia_pesos = (ahorros_euros - viaje_euros) * euro_a_peso;
         println!("Existe un excedente de ahorros de {diferencia_pesos} pesos.");
     }

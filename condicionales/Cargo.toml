@@ -37,3 +37,15 @@ path = "src/1-12.rs"
 [[bin]]
 name = "1-13"
 path = "src/1-13.rs"
+
+[[bin]]
+name = "1-17"
+path = "src/1-17.rs"
+
+[[bin]]
+name = "1-18"
+path = "src/1-18.rs"
+
+[[bin]]
+name = "1-19"
+path = "src/1-19.rs"
