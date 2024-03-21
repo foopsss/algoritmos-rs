@@ -1,33 +1,28 @@
 use std::io;
 use std::io::Write;
+use std::str;
+use core::fmt;
 
-pub fn read_integer(message: &str) -> i16 {
-    let mut number = String::new();
-
+pub fn read_input<T>(message: &str) -> T
+where
+    T: str::FromStr,
+    <T as str::FromStr>::Err: fmt::Debug,
+{
     print!("{message}: ");
-    io::stdout().flush()
-        .expect("¡Error!");
 
-    io::stdin().read_line(&mut number)
-        .expect("¡Error!");
+    io::stdout()
+        .flush()
+        .expect("¡Error al limpiar stdout!");
 
-    let number: i16 = number.trim().parse()
-        .expect("¡Introduzca un número válido!");
-
-    number
-}
-
-pub fn read_double(message: &str) -> f64 {
     let mut number = String::new();
+    
+    io::stdin()
+        .read_line(&mut number)
+        .expect("¡Error al leer el valor!");
 
-    print!("{message}: ");
-    io::stdout().flush()
-        .expect("¡Error!");
-
-    io::stdin().read_line(&mut number)
-        .expect("¡Error!");
-
-    let number: f64 = number.trim().parse()
+    let number: T = number
+        .trim()
+        .parse()
         .expect("¡Introduzca un número válido!");
 
     number
