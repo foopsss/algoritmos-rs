@@ -39,6 +39,30 @@ name = "1-13"
 path = "src/1-13.rs"
 
 [[bin]]
+name = "1-14"
+path = "src/1-14.rs"
+
+[[bin]]
+name = "1-15a"
+path = "src/1-15a.rs"
+
+[[bin]]
+name = "1-15b"
+path = "src/1-15b.rs"
+
+[[bin]]
+name = "1-15c"
+path = "src/1-15c.rs"
+
+[[bin]]
+name = "1-16a"
+path = "src/1-16a.rs"
+
+[[bin]]
+name = "1-16b"
+path = "src/1-16b.rs"
+
+[[bin]]
 name = "1-17"
 path = "src/1-17.rs"
 
@@ -49,3 +73,15 @@ path = "src/1-18.rs"
 [[bin]]
 name = "1-19"
 path = "src/1-19.rs"
+
+[[bin]]
+name = "1-20"
+path = "src/1-20.rs"
+
+[[bin]]
+name = "1-21"
+path = "src/1-21.rs"
+
+[[bin]]
+name = "1-22"
+path = "src/1-22.rs"
