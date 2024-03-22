@@ -1,10 +1,10 @@
-use functions::read_double;
+use functions::read_input;
 
 fn main() {
-    let viaje_euros = read_double("Importe en euros necesario para viajar a Europa");
-    let ahorros_dolares = read_double("Cantidad ahorrada en dólares");
-    let dolar_a_euro = read_double("Equivalencia de dólar a euro");
-    let euro_a_peso = read_double("Equivalencia de euro a peso");
+    let viaje_euros = read_input::<f64>("Importe en euros necesario para viajar a Europa");
+    let ahorros_dolares = read_input::<f64>("Cantidad ahorrada en dólares");
+    let dolar_a_euro = read_input::<f64>("Equivalencia de dólar a euro");
+    let euro_a_peso = read_input::<f64>("Equivalencia de euro a peso");
 
     let ahorros_euros = ahorros_dolares * dolar_a_euro;
     let diferencia_pesos;

@@ -1,9 +1,9 @@
-use functions::read_double;
+use functions::read_input;
 
 fn main() {
-    let b_mayor = read_double("Ingrese la longitud de la base mayor");
-    let b_menor = read_double("Ingrese la longitud de la base menor");
-    let altura = read_double("Ingrese la altura");
+    let b_mayor = read_input::<f64>("Ingrese la longitud de la base mayor");
+    let b_menor = read_input::<f64>("Ingrese la longitud de la base menor");
+    let altura = read_input::<f64>("Ingrese la altura");
 
     let superficie = ( (b_mayor + b_menor) * altura ) / 2.0;
 

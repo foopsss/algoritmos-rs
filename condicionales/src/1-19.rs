@@ -1,7 +1,7 @@
-use functions::read_integer;
+use functions::read_input;
 
 fn main() {
-    let v = read_integer("Ingrese un número entero");
+    let v = read_input::<i16>("Ingrese un número entero");
 
     let cuadrado = v.pow(2);
     let cubo = v.pow(3);

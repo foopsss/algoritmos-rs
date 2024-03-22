@@ -1,8 +1,8 @@
-use functions::read_double;
+use functions::read_input;
 
 fn main() {
-    let costo_pc = read_double("Costo para el vendedor de la PC");
-    let costo_imp = read_double("Costo para el vendedor de la impresora");
+    let costo_pc = read_input::<f64>("Costo para el vendedor de la PC");
+    let costo_imp = read_input::<f64>("Costo para el vendedor de la impresora");
 
     let ganancia_pc = costo_pc * 0.12;
     let ganancia_imp = costo_imp * 0.7;

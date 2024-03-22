@@ -1,8 +1,8 @@
-use functions::read_integer;
+use functions::read_input;
 
 fn main() {
-    let a = read_integer("Ingrese un valor para a");
-    let b = read_integer("Ingrese un valor para b");
+    let a = read_input::<i16>("Ingrese un valor para a");
+    let b = read_input::<i16>("Ingrese un valor para b");
     let suma = a + b;
 
     println!("");

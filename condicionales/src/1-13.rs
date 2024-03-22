@@ -1,7 +1,7 @@
-use functions::read_integer;
+use functions::read_input;
 
 fn main() {
-    let dinero = read_integer("Inserte una suma de dinero que sea mayor que 100 y menor que 1000");
+    let dinero = read_input::<i16>("Inserte una suma de dinero que sea mayor que 100 y menor que 1000");
 
     println!("");
     if dinero > 100 && dinero < 1000 {

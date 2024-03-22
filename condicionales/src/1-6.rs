@@ -1,9 +1,9 @@
-use functions::read_integer;
+use functions::read_input;
 
 fn main() {
-    let a = read_integer("Ingrese un valor para el número a");
-    let b = read_integer("Ingrese un valor para el número b");
-    let c = read_integer("Ingrese un valor para el número c");
+    let a = read_input::<i16>("Ingrese un valor para el número a");
+    let b = read_input::<i16>("Ingrese un valor para el número b");
+    let c = read_input::<i16>("Ingrese un valor para el número c");
 
     let mut mayor = a;
     let mut menor = 0;

@@ -1,7 +1,7 @@
-use functions::read_integer;
+use functions::read_input;
 
 fn main() {
-    let numero = read_integer("Inserte un número que sea mayor que 100 y menor que 1000");
+    let numero = read_input::<i16>("Inserte un número que sea mayor que 100 y menor que 1000");
 
     if numero > 100 && numero < 1000 {
         let centenas = numero / 100;

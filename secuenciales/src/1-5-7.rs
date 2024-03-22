@@ -1,9 +1,9 @@
-use functions::read_integer;
+use functions::read_input;
 
 fn main() {
-    let x = read_integer("Introduzca un valor para X");
-    let y = read_integer("Introduzca un valor para Y");
-    let z = read_integer("Introduzca un valor para Z");
+    let x = read_input::<i16>("Introduzca un valor para X");
+    let y = read_input::<i16>("Introduzca un valor para Y");
+    let z = read_input::<i16>("Introduzca un valor para Z");
 
     let med_geo = (x * y * z) / 3;
 

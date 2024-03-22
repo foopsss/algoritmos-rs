@@ -1,8 +1,8 @@
-use functions::read_integer;
+use functions::read_input;
 
 fn main() {
-    let anio_act = read_integer("Ingrese el año actual");
-    let anio_usuario = read_integer("Ingrese un año a elección");
+    let anio_act = read_input::<i16>("Ingrese el año actual");
+    let anio_usuario = read_input::<i16>("Ingrese un año a elección");
 
     println!("");
     if anio_usuario > anio_act {
