@@ -18,23 +18,24 @@ echo "version = \"0.1.0\"" >> $crate_name/Cargo.toml
 echo "edition = \"2021\"" >> $crate_name/Cargo.toml
 
 # Introduzco los nombres de los binarios que van a componer mi proyecto.
-echo "Introduzca los nombres de los binarios que va a tener el proyecto."
-echo "No se olvide de separarlos con espacios y de escribir los nombres" 
-echo "con guiones. Tampoco utilice puntos."
+echo "Introduzca el prefijo de los ejercicios de la guía."
+echo "No olvide utilizar guiones en vez de puntos."
 echo ""
-echo "Ejemplo: 1-13 1-14 1-15 1-16 1-17 1-18 1-19"
+echo -n "Prefijo: "
+read guide_number
 echo ""
 
-echo -n "Binarios: "
-read binary_names
+echo "¿Cuántos ejecutables va a tener el repositorio?"
+echo "Entiéndase como un ejecutable por ejercicio de la guía."
+echo ""
+echo -n "Número de ejecutables: "
+read binary_count
 
-binaries=( $binary_names )
-
-for arg in ${binaries[@]}
+for ((i = 1; i <= $binary_count; i++));
 do
 	echo "" >> $crate_name/Cargo.toml
 	echo "[[bin]]" >> $crate_name/Cargo.toml
-	echo "name = \"$arg\"" >> $crate_name/Cargo.toml
-	echo "path = \"src/$arg.rs\"" >> $crate_name/Cargo.toml
-	echo "" >> $crate_name/src/$arg.rs
+	echo "name = \"$guide_number-$i\"" >> $crate_name/Cargo.toml
+	echo "path = \"src/$guide_number-$i.rs\"" >> $crate_name/Cargo.toml
+	echo "" >> $crate_name/src/$guide_number-$i.rs
 done
