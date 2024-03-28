@@ -27,3 +27,13 @@ where
 
     number
 }
+
+pub fn draw_line(length: u8) {
+    for i in 1..=length {
+        if i < length {
+            print!("-");
+        } else {
+            println!("-");
+        }
+    }
+}
