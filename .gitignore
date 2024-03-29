@@ -2,3 +2,5 @@ secuenciales/target
 secuenciales/Cargo.lock
 condicionales/target
 condicionales/Cargo.lock
+subacciones/target
+subacciones/Cargo.lock
