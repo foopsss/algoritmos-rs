@@ -16,6 +16,9 @@ echo "[package]" > $crate_name/Cargo.toml
 echo "name = \"$crate_name\"" >> $crate_name/Cargo.toml
 echo "version = \"0.1.0\"" >> $crate_name/Cargo.toml
 echo "edition = \"2021\"" >> $crate_name/Cargo.toml
+echo "" >> $crate_name/Cargo.toml
+echo "[dependencies]" >> $crate_name/Cargo.toml
+echo "functions = {path = \"../functions\"}" >> $crate_name/Cargo.toml
 
 # Introduzco los nombres de los binarios que van a componer mi proyecto.
 echo "Introduzca el prefijo de los ejercicios de la guía."
@@ -37,5 +40,7 @@ do
 	echo "[[bin]]" >> $crate_name/Cargo.toml
 	echo "name = \"$guide_number-$i\"" >> $crate_name/Cargo.toml
 	echo "path = \"src/$guide_number-$i.rs\"" >> $crate_name/Cargo.toml
-	echo "" >> $crate_name/src/$guide_number-$i.rs
+
+	echo "fn main() {" > $crate_name/src/$guide_number-$i.rs
+	echo "}" >> $crate_name/src/$guide_number-$i.rs
 done
