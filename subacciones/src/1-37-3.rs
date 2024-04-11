@@ -22,7 +22,7 @@ fn main() {
         let menor = devolver_menor(a, b, c);
 
         println!("");
-        println!("De los números introducidos, el menor es {}.", menor);
+        println!("De los números introducidos, el menor es {menor}.");
 
         println!("");
         eleccion = read_input::<char>("¿Desea realizar otra comparación? [S/N]");
