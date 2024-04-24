@@ -19,6 +19,9 @@ echo "edition = \"2021\"" >> $crate_name/Cargo.toml
 echo "" >> $crate_name/Cargo.toml
 echo "[dependencies]" >> $crate_name/Cargo.toml
 echo "functions = {path = \"../functions\"}" >> $crate_name/Cargo.toml
+echo "" >> $crate_name/Cargo.toml
+echo "[profile.release]" >> $crate_name/Cargo.toml
+echo "overflow-checks = true" >> $crate_name/Cargo.toml
 
 # Introduzco los nombres de los binarios que van a componer mi proyecto.
 echo "Introduzca el prefijo de los ejercicios de la guía."

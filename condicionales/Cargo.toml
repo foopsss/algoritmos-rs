@@ -6,6 +6,9 @@ edition = "2021"
 [dependencies]
 functions = {path = "../functions"}
 
+[profile.release]
+overflow-checks = true
+
 [[bin]]
 name = "1-6"
 path = "src/1-6.rs"
