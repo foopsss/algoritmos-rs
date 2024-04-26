@@ -1,7 +1,7 @@
 use functions::read_input;
 
 fn main() {
-    let mut numero = read_input::<i16>("Ingrese un número");
+    let mut numero = read_input::<i64>("Ingrese un número");
 
     let mut cuadrado;
     let mut cubo;

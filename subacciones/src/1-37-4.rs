@@ -1,13 +1,13 @@
 use functions::read_input;
 use functions::draw_line;
 
-fn es_negativo(mut entrada: i64) -> i16 {
+fn es_negativo(mut entrada: i64) -> i64 {
     if entrada > 0 {
         let mut divisor = 1;
         let mut digito;
         let mut suma_digitos = 0;
 
-        let longitud = read_input::<i16>("Especifique la longitud del número");
+        let longitud = read_input::<u64>("Especifique la longitud del número");
 
         for _i in 1..longitud {
             divisor = divisor * 10;
@@ -20,7 +20,7 @@ fn es_negativo(mut entrada: i64) -> i16 {
 			divisor = divisor / 10;
         }
 
-        (suma_digitos % 7).try_into().expect("¡Error al convertir!")
+        suma_digitos % 7
     } else if entrada == 0 {
         0
     } else {

@@ -1,11 +1,11 @@
 use functions::read_input;
 
-fn devolver_cuadrado(num: i16) -> i16 {
+fn devolver_cuadrado(num: i64) -> i64 {
     num.pow(2)
 }
 
 fn main() {
-    let numero = read_input::<i16>("Introduzca un número");
+    let numero = read_input::<i64>("Introduzca un número");
 
     let cuadrado = devolver_cuadrado(numero);
 

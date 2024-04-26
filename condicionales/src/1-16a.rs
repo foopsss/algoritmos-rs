@@ -1,9 +1,9 @@
 use functions::read_input;
 
 fn main() {
-    let eg_isi = read_input::<i16>("Ingrese la cantidad de egresados de ISI");
-    let eg_iem = read_input::<i16>("Ingrese la cantidad de egresados de IEM");
-    let eg_iq = read_input::<i16>("Ingrese la cantidad de egresados de IQ");
+    let eg_isi = read_input::<i64>("Ingrese la cantidad de egresados de ISI");
+    let eg_iem = read_input::<i64>("Ingrese la cantidad de egresados de IEM");
+    let eg_iq = read_input::<i64>("Ingrese la cantidad de egresados de IQ");
 
     let total = eg_isi + eg_iem + eg_iq;
     let porc_isi = (eg_isi * 100) / total;

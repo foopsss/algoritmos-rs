@@ -1,8 +1,8 @@
 use functions::read_input;
 
 fn main() {
-    let dividendo = read_input::<i16>("Ingrese el valor del dividendo");
-    let divisor = read_input::<i16>("Ingrese el valor del divisor");
+    let dividendo = read_input::<i64>("Ingrese el valor del dividendo");
+    let divisor = read_input::<i64>("Ingrese el valor del divisor");
 
     let mut resto = dividendo;
     let mut cociente = 0;

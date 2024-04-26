@@ -16,9 +16,9 @@ fn main() {
     while eleccion == 'S' {
         nro_facu = nro_facu + 1;
 
-        let eg_isi = read_input::<i16>("Ingrese la cantidad de egresados de ISI");
-        let eg_iem = read_input::<i16>("Ingrese la cantidad de egresados de IEM");
-        let eg_iq = read_input::<i16>("Ingrese la cantidad de egresados de IQ");
+        let eg_isi = read_input::<i64>("Ingrese la cantidad de egresados de ISI");
+        let eg_iem = read_input::<i64>("Ingrese la cantidad de egresados de IEM");
+        let eg_iq = read_input::<i64>("Ingrese la cantidad de egresados de IQ");
 
         total_isi = total_isi + eg_isi;
         total_iem = total_iem + eg_iem;

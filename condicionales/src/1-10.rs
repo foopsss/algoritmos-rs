@@ -1,8 +1,8 @@
 use functions::read_input;
 
 fn main() {
-    let a = read_input::<i16>("Ingrese un valor para A");
-    let b = read_input::<i16>("Ingrese un valor para B");
+    let a = read_input::<i64>("Ingrese un valor para A");
+    let b = read_input::<i64>("Ingrese un valor para B");
 
     println!("");
     if a % b == 0 {

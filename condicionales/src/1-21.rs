@@ -1,8 +1,8 @@
 use functions::read_input;
 
 fn main() {
-    let mut numero = read_input::<i16>("Ingrese un número");
-    let incremento = read_input::<i16>("Ingrese la cantidad de veces a incrementarlo");
+    let mut numero = read_input::<i64>("Ingrese un número");
+    let incremento = read_input::<i64>("Ingrese la cantidad de veces a incrementarlo");
 
     let mut cuadrado;
     let mut cubo;
