@@ -1,23 +1,17 @@
 use functions::read_input;
 use functions::draw_line;
 
-fn es_negativo(mut entrada: i64) -> i16 {
+fn es_negativo(mut entrada: i64, long_entrada: u32) -> i8 {
     if entrada > 0 {
-        let mut divisor = 1;
-        let mut digito;
         let mut suma_digitos = 0;
+        let mut divisor;
+        let mut digito;
 
-        let longitud = read_input::<i16>("Especifique la longitud del número");
-
-        for _i in 1..longitud {
-            divisor = divisor * 10;
-        }
-
-        for _i in 1..=longitud {
+        for i in 1..=long_entrada {
+            divisor = i64::pow(10, long_entrada - i);
             digito = entrada / divisor;
             suma_digitos = suma_digitos + digito;
-			entrada = entrada - (digito * divisor);
-			divisor = divisor / 10;
+            entrada = entrada - (digito * divisor);
         }
 
         (suma_digitos % 7).try_into().expect("¡Error al convertir!")
@@ -29,14 +23,22 @@ fn es_negativo(mut entrada: i64) -> i16 {
 }
 
 fn main() {
-    let mut eleccion = 'S';
+    let mut eleccion = read_input::<char>("¿Desea comprobar si un número es negativo? [S/N]");
+    println!("");
 
     while eleccion == 'S' {
         let numero = read_input::<i64>("Introduzca un número");
-        let clave = es_negativo(numero);
+        let longitud = read_input::<u32>("Introduzca la longitud del número");
+
+        let clave = es_negativo(numero, longitud);
 
         println!("");
-        println!("La clave es {clave}.");
+        if clave >= 0 {
+            println!("El número es positivo.");
+            println!("Clave: {clave}");
+        } else {
+            println!("El número es negativo.")
+        }
 
         println!("");
         eleccion = read_input::<char>("¿Desea probar con otro número? [S/N]");

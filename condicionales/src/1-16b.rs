@@ -2,7 +2,9 @@ use functions::read_input;
 use functions::draw_line;
 
 fn main() {
-    let mut eleccion = 'S';
+    let mut eleccion = read_input::<char>("¿Desea calcular el porcentaje de alumnos por carrera de varias facultades? [S/N]");
+    println!("");
+
     let mut nro_facu = 0;
     let mut total_isi = 0;
     let mut total_iem = 0;
@@ -38,7 +40,7 @@ fn main() {
         println!("");
         eleccion = read_input::<char>("¿Desea añadir otra facultad? [S/N]");
 
-        draw_line(80);
+        draw_line(85);
     }
 
     println!("El total general de egresados de todas las facultades es de {total_general} estudiantes.");

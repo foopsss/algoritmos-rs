@@ -12,7 +12,8 @@ fn devolver_menor(num_a: i16, num_b: i16, num_c: i16) -> i16 {
 }
 
 fn main() {
-    let mut eleccion = 'S';
+    let mut eleccion = read_input::<char>("¿Desea hallar el menor de tres valores? [S/N]");
+    println!("");
 
     while eleccion == 'S' {
         let a = read_input::<i16>("Ingrese un valor numérico para A");
@@ -28,7 +29,7 @@ fn main() {
         eleccion = read_input::<char>("¿Desea realizar otra comparación? [S/N]");
 
         if eleccion == 'S' {
-            draw_line(45);
+            draw_line(50);
         }
     }
 }

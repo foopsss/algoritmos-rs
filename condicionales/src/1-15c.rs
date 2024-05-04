@@ -2,13 +2,16 @@ use functions::read_input;
 use functions::draw_line;
 
 fn main() {
-    let mut eleccion = 'S';
+    let mut eleccion = read_input::<char>("¿Desea calcular la altura de un edificio en pies? [S/N]");
+    println!("");
 
     while eleccion == 'S' {
+        const METRO_A_PIE: f64 = 3.28;
+
         let pisos = read_input::<f64>("Introduzca el número de pisos del edificio");
         let alt_prom = read_input::<f64>("Introduzca la altura promedio de cada piso (en metros)");
 
-        let alt_edificio = (pisos * alt_prom) * 3.28;
+        let alt_edificio = (pisos * alt_prom) * METRO_A_PIE;
 
         println!("");
         println!("La altura del edificio es de {alt_edificio} pies.");
