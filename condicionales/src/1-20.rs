@@ -19,6 +19,6 @@ fn main() {
             println!();
         }
 
-        numero = numero + 1;
+        numero += 1;
     }
 }
