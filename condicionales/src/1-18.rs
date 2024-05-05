@@ -12,7 +12,7 @@ fn main() {
         cociente = cociente + 1;
     }
 
-    println!("");
+    println!();
     println!("El valor del dividendo es {dividendo}.");
     println!("El valor del divisor es {divisor}.");
     println!("El valor del cociente es {cociente}.");

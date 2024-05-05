@@ -15,6 +15,6 @@ fn main() {
     let iva = sumatoria * TASA_IVA;
     let total = sumatoria + iva;
 
-    println!("");
+    println!();
     println!("El precio total de las ventas es de {total} pesos.");
 }

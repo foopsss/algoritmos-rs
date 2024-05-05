@@ -8,7 +8,7 @@ fn main() {
         let decenas = (numero - centenas * 100) / 10;
         let unidades = numero - (centenas * 100) - (decenas * 10);
 
-        println!("");
+        println!();
         println!("El número cuenta con {centenas} centenas.");
         println!("El número cuenta con {decenas} decenas.");
         println!("El número cuenta con {unidades} unidades.");

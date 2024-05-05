@@ -8,6 +8,6 @@ fn main() {
 
     let seccion = (corriente / conductividad) + (corriente / conductividad) * TASA_SEG;
 
-    println!("");
+    println!();
     println!("La sección del conductor es: {seccion}");
 }

@@ -5,7 +5,7 @@ fn main() {
     let b = read_input::<i16>("Ingrese un valor para b");
     let suma = a + b;
 
-    println!("");
+    println!();
     match suma {
         i16::MIN ..= 50 => println!("La suma es menor o igual a 50"),
         51 ..= 100 => println!("La suma es mayor que 50 pero menor o igual a 100."),

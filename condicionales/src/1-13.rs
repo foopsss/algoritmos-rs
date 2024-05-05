@@ -3,7 +3,7 @@ use functions::read_input;
 fn main() {
     let dinero = read_input::<i16>("Inserte una suma de dinero que sea mayor que 100 y menor que 1000");
 
-    println!("");
+    println!();
     if dinero > 100 && dinero < 1000 {
         let centenas = dinero / 100;
         let decenas = (dinero - centenas * 100) / 10;

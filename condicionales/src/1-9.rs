@@ -9,7 +9,7 @@ fn main() {
     let ahorros_euros = ahorros_dolares * dolar_a_euro;
     let diferencia_pesos;
 
-    println!("");
+    println!();
     if viaje_euros > ahorros_euros {
         diferencia_pesos = (viaje_euros - ahorros_euros) * euro_a_peso;
         println!("Para poder cubrir los costos del viaje se requieren de otros {diferencia_pesos} pesos.");

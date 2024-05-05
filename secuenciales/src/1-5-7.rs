@@ -7,7 +7,7 @@ fn main() {
 
     let med_geo = (x * y * z) / 3;
 
-    println!("");
+    println!();
     println!("Valor de X: {x}");
     println!("Valor de Y: {y}");
     println!("Valor de Z: {z}");

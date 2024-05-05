@@ -4,7 +4,7 @@ fn main() {
     let a = read_input::<i16>("Ingrese un valor para A");
     let b = read_input::<i16>("Ingrese un valor para B");
 
-    println!("");
+    println!();
     if a % b == 0 {
         println!("B es divisor de A.");
     } else if b % a == 0 {

@@ -13,6 +13,6 @@ fn main() {
 
     let suma_digitos = sumar_digitos(numero);
 
-    println!("");
+    println!();
     println!("La suma de los dígitos de {numero} es {suma_digitos}.");
 }

@@ -3,7 +3,7 @@ use functions::draw_line;
 
 fn main() {
     let mut eleccion = read_input::<char>("¿Desea calcular la altura de un edificio en pies? [S/N]");
-    println!("");
+    println!();
 
     while eleccion == 'S' {
         const METRO_A_PIE: f64 = 3.28;
@@ -13,10 +13,10 @@ fn main() {
 
         let alt_edificio = (pisos * alt_prom) * METRO_A_PIE;
 
-        println!("");
+        println!();
         println!("La altura del edificio es de {alt_edificio} pies.");
 
-        println!("");
+        println!();
         eleccion = read_input::<char>("¿Desea realizar otro cálculo? [S/N]");
 
         if eleccion == 'S' {

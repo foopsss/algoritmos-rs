@@ -18,6 +18,6 @@ fn main() {
         edad = (anio_act - anio_nac) - 1;
     }
 
-    println!("");
+    println!();
     println!("La persona tiene {edad} años.");
 }

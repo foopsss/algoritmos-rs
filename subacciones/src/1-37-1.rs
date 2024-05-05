@@ -9,6 +9,6 @@ fn main() {
 
     let cuadrado = devolver_cuadrado(numero);
 
-    println!("");
+    println!();
     println!("El cuadrado de {numero} es {cuadrado}.");
 }

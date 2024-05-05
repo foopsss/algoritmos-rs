@@ -10,7 +10,7 @@ fn main() {
     let porc_iem = (eg_iem * 100) / total;
     let porc_iq = (eg_iq * 100) / total;
 
-    println!("");
+    println!();
 	println!("Los egresados de ISI componen el {porc_isi}% de los egresados.");
 	println!("Los egresados de IEM componen el {porc_iem}% de los egresados.");
 	println!("Los egresados de IQ componen el {porc_iq}% de los egresados.");

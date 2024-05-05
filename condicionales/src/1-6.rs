@@ -49,7 +49,7 @@ fn main() {
         }
     }
 
-    println!("");
+    println!();
     println!("El número más grande es {mayor}.");
     println!("El número más pequeño es {menor}.");
     println!("Entre ellos se encuentra el número {intermedio}.");

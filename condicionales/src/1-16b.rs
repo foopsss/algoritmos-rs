@@ -3,7 +3,7 @@ use functions::draw_line;
 
 fn main() {
     let mut eleccion = read_input::<char>("¿Desea calcular el porcentaje de alumnos por carrera de varias facultades? [S/N]");
-    println!("");
+    println!();
 
     let mut nro_facu = 0;
     let mut total_isi = 0;
@@ -31,13 +31,13 @@ fn main() {
         porc_iem = (eg_iem * 100) / total_facu;
         porc_iq = (eg_iq * 100) / total_facu;
 
-        println!("");
+        println!();
         println!("Facultad: {nro_facu}");
         println!("Los egresados de ISI componen el {porc_isi}% de los egresados.");
         println!("Los egresados de IEM componen el {porc_iem}% de los egresados.");
         println!("Los egresados de IQ componen el {porc_iq}% de los egresados.");
 
-        println!("");
+        println!();
         eleccion = read_input::<char>("¿Desea añadir otra facultad? [S/N]");
 
         draw_line(85);

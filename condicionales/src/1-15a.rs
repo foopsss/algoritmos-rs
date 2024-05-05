@@ -8,6 +8,6 @@ fn main() {
 
     let alt_edificio = (pisos * alt_prom) * METRO_A_PIE;
 
-    println!("");
+    println!();
     println!("La altura del edificio es de {alt_edificio} pies.");
 }

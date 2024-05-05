@@ -7,6 +7,6 @@ fn main() {
     
     let discriminante = b.pow(2) - 4 * a * c;
 
-    println!("");
+    println!();
     println!("El resultado del discriminante es: {discriminante}");
 }

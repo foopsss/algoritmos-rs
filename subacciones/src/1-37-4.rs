@@ -24,7 +24,7 @@ fn es_negativo(mut entrada: i64, long_entrada: u32) -> i8 {
 
 fn main() {
     let mut eleccion = read_input::<char>("¿Desea comprobar si un número es negativo? [S/N]");
-    println!("");
+    println!();
 
     while eleccion == 'S' {
         let numero = read_input::<i64>("Introduzca un número");
@@ -32,7 +32,7 @@ fn main() {
 
         let clave = es_negativo(numero, longitud);
 
-        println!("");
+        println!();
         if clave >= 0 {
             println!("El número es positivo.");
             println!("Clave: {clave}");
@@ -40,7 +40,7 @@ fn main() {
             println!("El número es negativo.")
         }
 
-        println!("");
+        println!();
         eleccion = read_input::<char>("¿Desea probar con otro número? [S/N]");
 
         if eleccion == 'S' {

@@ -10,6 +10,6 @@ fn main() {
         producto = producto + multiplicando;
     }
 
-    println!("");
+    println!();
     println!("El valor del producto es {producto}.");
 }

@@ -6,7 +6,7 @@ fn main() {
     let mut cuadrado;
     let mut cubo;
 
-    println!("");
+    println!();
     for i in 1..=10 {
         cuadrado = numero.pow(2);
         cubo = numero.pow(3);
@@ -16,7 +16,7 @@ fn main() {
         println!("Cubo: {cubo}");
 
         if i < 10 {
-            println!("");
+            println!();
         }
 
         numero = numero + 1;
