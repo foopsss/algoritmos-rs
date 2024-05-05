@@ -10,8 +10,8 @@ fn es_negativo(mut entrada: i64, long_entrada: u32) -> i8 {
         for i in 1..=long_entrada {
             divisor = i64::pow(10, long_entrada - i);
             digito = entrada / divisor;
-            suma_digitos = suma_digitos + digito;
-            entrada = entrada - (digito * divisor);
+            suma_digitos += digito;
+            entrada -= digito * divisor;
         }
 
         (suma_digitos % 7).try_into().expect("¡Error al convertir!")
