@@ -18,8 +18,8 @@ fn main() {
         println!("Cubo: {cubo}");
         println!();
 
-        suma_cuadrados = suma_cuadrados + cuadrado;
-        numero = numero + 1;
+        suma_cuadrados += cuadrado;
+        numero += 1;
     }
 
     println!("El resultado de la suma de cuadrados es {suma_cuadrados}.");

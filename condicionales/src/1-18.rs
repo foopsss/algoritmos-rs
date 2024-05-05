@@ -8,8 +8,8 @@ fn main() {
     let mut cociente = 0;
 
     while resto - divisor >= 0 {
-        resto = resto - divisor;
-        cociente = cociente + 1;
+        resto -= divisor;
+        cociente += 1;
     }
 
     println!();

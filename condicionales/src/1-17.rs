@@ -7,7 +7,7 @@ fn main() {
     let mut producto = 0;
 
     for _i in 1..=multiplicador {
-        producto = producto + multiplicando;
+        producto += multiplicando;
     }
 
     println!();

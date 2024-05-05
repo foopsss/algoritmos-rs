@@ -16,17 +16,17 @@ fn main() {
     let mut porc_iq;
 
     while eleccion == 'S' {
-        nro_facu = nro_facu + 1;
+        nro_facu += 1;
 
         let eg_isi = read_input::<i16>("Ingrese la cantidad de egresados de ISI");
         let eg_iem = read_input::<i16>("Ingrese la cantidad de egresados de IEM");
         let eg_iq = read_input::<i16>("Ingrese la cantidad de egresados de IQ");
 
-        total_isi = total_isi + eg_isi;
-        total_iem = total_iem + eg_iem;
-        total_iq = total_iq + eg_iq;
+        total_isi += eg_isi;
+        total_iem += eg_iem;
+        total_iq += eg_iq;
         total_facu = eg_isi + eg_iem + eg_iq;
-        total_general = total_general + total_facu;
+        total_general += total_facu;
         porc_isi = (eg_isi * 100) / total_facu;
         porc_iem = (eg_iem * 100) / total_facu;
         porc_iq = (eg_iq * 100) / total_facu;
