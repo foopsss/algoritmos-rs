@@ -2,23 +2,23 @@ use functions::read_input;
 use functions::draw_line;
 
 fn es_negativo(mut entrada: i64, long_entrada: u32) -> i8 {
-    if entrada > 0 {
-        let mut suma_digitos = 0;
-        let mut divisor;
-        let mut digito;
+    match entrada {
+        i64::MIN ..= -1 => -1,
+        0 => 0,
+        1 ..= i64::MAX => {
+            let mut suma_digitos = 0;
+            let mut divisor;
+            let mut digito;
 
-        for i in 1..=long_entrada {
-            divisor = i64::pow(10, long_entrada - i);
-            digito = entrada / divisor;
-            suma_digitos += digito;
-            entrada -= digito * divisor;
+            for i in 1..=long_entrada {
+                divisor = i64::pow(10, long_entrada - i);
+                digito = entrada / divisor;
+                suma_digitos += digito;
+                entrada -= digito * divisor;
+            }
+
+            (suma_digitos % 7).try_into().expect("¡Error al convertir!")
         }
-
-        (suma_digitos % 7).try_into().expect("¡Error al convertir!")
-    } else if entrada == 0 {
-        0
-    } else {
-        -1
     }
 }
 

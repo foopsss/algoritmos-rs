@@ -1,3 +1,5 @@
+functions/target
+functions/Cargo.lock
 secuenciales/target
 secuenciales/Cargo.lock
 condicionales/target
