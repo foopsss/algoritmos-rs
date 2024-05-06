@@ -1,14 +1,18 @@
+use std::cmp::Ordering;
+
 use functions::read_input;
 use functions::draw_line;
 
-fn es_negativo(mut entrada: i64, long_entrada: u32) -> i8 {
-    match entrada {
-        i64::MIN ..= -1 => -1,
-        0 => 0,
-        1 ..= i64::MAX => {
+fn es_negativo(mut entrada: i64) -> i8 {
+    match entrada.cmp(&0) {
+        Ordering::Less => -1,
+        Ordering::Equal => 0,
+        Ordering::Greater => {
             let mut suma_digitos = 0;
             let mut divisor;
             let mut digito;
+
+            let long_entrada = read_input::<u32>("Introduzca la longitud del número");
 
             for i in 1..=long_entrada {
                 divisor = i64::pow(10, long_entrada - i);
@@ -28,23 +32,23 @@ fn main() {
 
     while eleccion == 'S' {
         let numero = read_input::<i64>("Introduzca un número");
-        let longitud = read_input::<u32>("Introduzca la longitud del número");
-
-        let clave = es_negativo(numero, longitud);
+        let clave = es_negativo(numero);
 
         println!();
-        if clave >= 0 {
-            println!("El número es positivo.");
-            println!("Clave: {clave}");
-        } else {
-            println!("El número es negativo.")
+        match clave.cmp(&0) {
+            Ordering::Less => println!("El número es negativo."),
+            Ordering::Equal => println!("El número es 0."),
+            Ordering::Greater => {
+                println!("El número es positivo.");
+                println!("Clave: {clave}");
+            }
         }
 
         println!();
         eleccion = read_input::<char>("¿Desea probar con otro número? [S/N]");
 
         if eleccion == 'S' {
-            draw_line(40);
+            draw_line(55);
         }
     }
 }
