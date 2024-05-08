@@ -1,3 +1,5 @@
+use std::cmp::Ordering;
+
 use functions::read_input;
 
 fn main() {
@@ -12,15 +14,19 @@ fn main() {
     if b > mayor && c > mayor {
         menor = mayor;
 
-        if b > c {
-            intermedio = c;
-            mayor = b;
-        } else if b == c {
-            intermedio = b;
-            mayor = intermedio;
-        } else if b < c {
-            intermedio = b;
-            mayor = c;
+        match b.cmp(&c) {
+            Ordering::Less => {
+                intermedio = b;
+                mayor = c;
+            }
+            Ordering::Equal => {
+                intermedio = b;
+                mayor = intermedio;
+            }
+            Ordering::Greater => {
+                intermedio = c;
+                mayor = b;
+            }
         }
     }
 
@@ -37,15 +43,19 @@ fn main() {
     }
 
     if b < mayor && c < mayor {
-        if b > c {
-            menor = c;
-            intermedio = b;
-        } else if b == c {
-            intermedio = b;
-            menor = intermedio;
-        } else if b < c {
-            menor = b;
-            intermedio = c;
+        match b.cmp(&c) {
+            Ordering::Less => {
+                menor = b;
+                intermedio = c;
+            }
+            Ordering::Equal => {
+                intermedio = b;
+                menor = intermedio;
+            }
+            Ordering::Greater => {
+                menor = c;
+                intermedio = b;
+            }
         }
     }
 

@@ -14,18 +14,18 @@ where
         .flush()
         .expect("¡Error al limpiar stdout!");
 
-    let mut number = String::new();
+    let mut input = String::new();
     
     io::stdin()
-        .read_line(&mut number)
+        .read_line(&mut input)
         .expect("¡Error al leer el valor!");
 
-    let number: T = number
+    let input: T = input
         .trim()
         .parse()
-        .expect("¡Introduzca un número válido!");
+        .expect("¡Introduzca un valor válido!");
 
-    number
+    input
 }
 
 pub fn draw_line(length: u8) {
