@@ -1,5 +1,4 @@
 use std::cmp::Ordering;
-
 use functions::read_input;
 use functions::draw_line;
 

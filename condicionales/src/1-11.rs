@@ -1,3 +1,4 @@
+use std::cmp::Ordering;
 use functions::read_input;
 
 fn main() {
@@ -5,11 +6,9 @@ fn main() {
     let anio_usuario = read_input::<i16>("Ingrese un año a elección");
 
     println!();
-    if anio_usuario > anio_act {
-        println!("FUTURO.");
-    } else if anio_usuario == anio_act {
-        println!("ACTUAL.");
-    } else {
-        println!("PASADO.");
+    match anio_usuario.cmp(&anio_act) {
+        Ordering::Less => println!("PASADO."),
+        Ordering::Equal => println!("ACTUAL."),
+        Ordering::Greater => println!("FUTURO."),
     }
 }

@@ -1,3 +1,4 @@
+use std::cmp::Ordering;
 use functions::read_input;
 
 fn main() {
@@ -10,12 +11,14 @@ fn main() {
 
     let mut edad = anio_act - anio_nac;
 
-    if mes_act == mes_nac {
-        if dia_act < dia_nac {
-            edad = (anio_act - anio_nac) - 1;
+    match mes_act.cmp(&mes_nac) {
+        Ordering::Less => edad = (anio_act - anio_nac) - 1,
+        Ordering::Equal => {
+            if dia_act < dia_nac {
+                edad = (anio_act - anio_nac) - 1;
+            }
         }
-    } else if mes_act < mes_nac {
-        edad = (anio_act - anio_nac) - 1;
+        Ordering::Greater => {},
     }
 
     println!();
