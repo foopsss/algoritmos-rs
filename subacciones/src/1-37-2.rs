@@ -10,7 +10,6 @@ fn sumar_digitos(num: i16) -> i16 {
 
 fn main() {
     let numero = read_input::<i16>("Introduzca un número de tres dígitos");
-
     let suma_digitos = sumar_digitos(numero);
 
     println!();

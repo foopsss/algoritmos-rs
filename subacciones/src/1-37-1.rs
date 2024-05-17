@@ -6,7 +6,6 @@ fn devolver_cuadrado(num: i16) -> i16 {
 
 fn main() {
     let numero = read_input::<i16>("Introduzca un número");
-
     let cuadrado = devolver_cuadrado(numero);
 
     println!();

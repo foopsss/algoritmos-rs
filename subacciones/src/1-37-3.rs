@@ -19,7 +19,6 @@ fn main() {
         let a = read_input::<i16>("Ingrese un valor numérico para A");
         let b = read_input::<i16>("Ingrese un valor numérico para B");
         let c = read_input::<i16>("Ingrese un valor numérico para C");
-
         let menor = devolver_menor(a, b, c);
 
         println!();
