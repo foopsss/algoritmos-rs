@@ -20,10 +20,10 @@ fn verificar_digito(entrada: char) -> Option<bool> {
 
 fn main() {
     let car_us = read_input::<char>("Introduzca un carácter");
-    let es_dígito = verificar_digito(car_us);
+    let es_digito = verificar_digito(car_us);
 
     println!();
-    if es_dígito.expect("¡Se esperaba un valor booleano!") {
+    if es_digito.expect("¡Se esperaba un valor booleano!") {
         println!("El carácter {car_us} es un dígito.");
     } else {
         println!("El carácter {car_us} NO es un dígito.");
