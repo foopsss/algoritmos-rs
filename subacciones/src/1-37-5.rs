@@ -29,4 +29,3 @@ fn main() {
         println!("El carácter {car_us} NO es un dígito.");
     }
 }
-
