@@ -1,5 +1,5 @@
-use std::mem::swap;
 use functions::read_input;
+use std::mem::swap;
 
 fn intercambiar(mut a: i16, mut b: i16) -> (i16, i16) {
     swap(&mut a, &mut b);
