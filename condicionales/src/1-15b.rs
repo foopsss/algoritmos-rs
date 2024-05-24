@@ -1,5 +1,4 @@
-use functions::read_input;
-use functions::draw_line;
+use functions::{draw_line, read_input};
 
 fn main() {
     const METRO_A_PIE: f64 = 3.28;
@@ -17,7 +16,7 @@ fn main() {
         println!("La altura del edificio es de {alt_edificio} pies.");
 
         if i < 50 {
-           draw_line(60);
+            draw_line(60);
         }
     }
 }

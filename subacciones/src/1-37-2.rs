@@ -3,7 +3,7 @@ use functions::read_input;
 fn sumar_digitos(num: i16) -> i16 {
     let centenas = num / 100;
     let decenas = (num - centenas * 100) / 10;
-	let unidades = num - (centenas * 100) - (decenas * 10);
+    let unidades = num - (centenas * 100) - (decenas * 10);
 
     centenas + decenas + unidades
 }

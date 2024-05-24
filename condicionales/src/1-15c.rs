@@ -1,8 +1,8 @@
-use functions::read_input;
-use functions::draw_line;
+use functions::{draw_line, read_input};
 
 fn main() {
-    let mut eleccion = read_input::<char>("¿Desea calcular la altura de un edificio en pies? [S/N]");
+    let mut eleccion =
+        read_input::<char>("¿Desea calcular la altura de un edificio en pies? [S/N]");
     println!();
 
     while eleccion == 'S' {

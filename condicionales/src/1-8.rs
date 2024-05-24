@@ -1,5 +1,5 @@
-use std::cmp::Ordering;
 use functions::read_input;
+use std::cmp::Ordering;
 
 fn main() {
     let anio_act = read_input::<i16>("Introduzca el año actual");
@@ -18,7 +18,7 @@ fn main() {
                 edad = (anio_act - anio_nac) - 1;
             }
         }
-        Ordering::Greater => {},
+        Ordering::Greater => {}
     }
 
     println!();

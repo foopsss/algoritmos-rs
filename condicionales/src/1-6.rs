@@ -1,5 +1,5 @@
-use std::cmp::Ordering;
 use functions::read_input;
+use std::cmp::Ordering;
 
 fn main() {
     let a = read_input::<i16>("Ingrese un valor para el número a");

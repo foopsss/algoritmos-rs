@@ -1,5 +1,4 @@
-use functions::read_input;
-use functions::draw_line;
+use functions::{draw_line, read_input};
 
 fn devolver_menor(num_a: i16, num_b: i16, num_c: i16) -> i16 {
     if num_a < num_b && num_a < num_c {

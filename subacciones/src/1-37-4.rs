@@ -1,6 +1,5 @@
+use functions::{draw_line, read_input};
 use std::cmp::Ordering;
-use functions::read_input;
-use functions::draw_line;
 
 fn es_negativo(mut entrada: i64) -> i8 {
     match entrada.cmp(&0) {

@@ -1,7 +1,7 @@
+use core::fmt;
 use std::io;
 use std::io::Write;
 use std::str;
-use core::fmt;
 
 pub fn read_input<T>(message: &str) -> T
 where
@@ -10,20 +10,15 @@ where
 {
     print!("{message}: ");
 
-    io::stdout()
-        .flush()
-        .expect("¡Error al limpiar stdout!");
+    io::stdout().flush().expect("¡Error al limpiar stdout!");
 
     let mut input = String::new();
-    
+
     io::stdin()
         .read_line(&mut input)
         .expect("¡Error al leer el valor!");
 
-    let input: T = input
-        .trim()
-        .parse()
-        .expect("¡Introduzca un valor válido!");
+    let input: T = input.trim().parse().expect("¡Introduzca un valor válido!");
 
     input
 }
