@@ -24,7 +24,7 @@ where
 }
 
 pub fn draw_line(length: u8) {
-    for _i in 1..length {
+    for _i in 1..(length - 1) {
         print!("-");
     }
     println!("-");
