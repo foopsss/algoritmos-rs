@@ -6,42 +6,13 @@ fn main() {
     let b = read_input::<i16>("Ingrese un valor para el número b");
     let c = read_input::<i16>("Ingrese un valor para el número c");
 
-    let mut mayor = a;
+    let mut mayor = 0;
     let mut menor = 0;
     let mut intermedio = 0;
 
-    if b > mayor && c > mayor {
-        menor = mayor;
+    if a > b && a > c {
+        mayor = a;
 
-        match b.cmp(&c) {
-            Ordering::Less => {
-                intermedio = b;
-                mayor = c;
-            }
-            Ordering::Equal => {
-                intermedio = b;
-                mayor = intermedio;
-            }
-            Ordering::Greater => {
-                intermedio = c;
-                mayor = b;
-            }
-        }
-    }
-
-    if b > mayor && c < mayor {
-        menor = c;
-        intermedio = mayor;
-        mayor = b;
-    }
-
-    if b < mayor && c > mayor {
-        menor = b;
-        intermedio = mayor;
-        mayor = c;
-    }
-
-    if b < mayor && c < mayor {
         match b.cmp(&c) {
             Ordering::Less => {
                 menor = b;
@@ -58,8 +29,53 @@ fn main() {
         }
     }
 
+    if b > a && b > c {
+        mayor = b;
+
+        match a.cmp(&c) {
+            Ordering::Less => {
+                menor = a;
+                intermedio = c;
+            }
+            Ordering::Equal => {
+                intermedio = a;
+                menor = intermedio;
+            }
+            Ordering::Greater => {
+                menor = c;
+                intermedio = a;
+            }
+        }
+    }
+
+    if c > a && c > b {
+        mayor = c;
+
+        match a.cmp(&b) {
+            Ordering::Less => {
+                menor = a;
+                intermedio = b;
+            }
+            Ordering::Equal => {
+                intermedio = a;
+                menor = intermedio;
+            }
+            Ordering::Greater => {
+                menor = b;
+                intermedio = a;
+            }
+        }
+    }
+
     println!();
-    println!("El número más grande es {mayor}.");
-    println!("El número más pequeño es {menor}.");
-    println!("Entre ellos se encuentra el número {intermedio}.");
+    if a == b && b == c {
+        println!("¡Los tres números coinciden!");
+    } else {
+        println!("El número más grande es {mayor}.");
+        println!("El número más pequeño es {menor}.");
+
+        if intermedio != menor {
+            println!("Entre ellos se encuentra el número {intermedio}.");
+        }
+    }
 }
