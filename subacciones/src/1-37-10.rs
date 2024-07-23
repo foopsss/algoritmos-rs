@@ -72,7 +72,7 @@ fn mostrar_nro(entrada: u8) {
             println!("   *");
             println!("****");
         }
-        10..=u8::MAX => println!("¡Introduzca un número correcto!"),
+        _ => println!("¡Introduzca un número correcto!"),
     }
 }
 
